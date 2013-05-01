@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "MyTableController.h"
 
 @interface ViewController ()
 @end
@@ -26,12 +27,12 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)generateFieldName:(id)sender {
-    [self performSegueWithIdentifier:@"loadCourseList" sender:sender];
-}
-
--(void)performSegueWithIdentifier:(NSString *)identifier sender:(id)sender
-{
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if([[segue identifier] isEqualToString:@"loadCourseList"])
+    {
+        MyTableController *destinationVC = [segue destinationViewController];
+        [destinationVC setFieldName:[[sender textLabel] text]];
+    }
     
 }
 @end

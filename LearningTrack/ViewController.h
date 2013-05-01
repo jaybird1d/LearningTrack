@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
-- (IBAction)generateFieldName:(id)sender;
 @property NSString *fieldName;
 
 @end

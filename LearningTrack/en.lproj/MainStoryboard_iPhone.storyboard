@@ -27,7 +27,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="generateFieldName:" destination="Oak-lD-gZm" eventType="touchUpInside" id="rzW-rf-ouU"/>
                                     <segue destination="JhZ-pn-tzb" kind="modal" identifier="loadCourseList" id="a7N-HO-nmg"/>
                                 </connections>
                             </button>
@@ -53,6 +52,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="JhZ-pn-tzb" kind="modal" identifier="loadCourseList" id="9cU-TM-6M0"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uOK-iY-9Wr">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -127,7 +129,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="juZ-2J-R5X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-849" y="273"/>
+            <point key="canvasLocation" x="-985" y="115"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="5">
@@ -181,7 +183,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1180" y="-667"/>
+            <point key="canvasLocation" x="-1004" y="-675"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Sxp-VV-i7G">
@@ -246,15 +248,30 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eWh-om-Prg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-470" y="273"/>
+            <point key="canvasLocation" x="-286" y="237"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="MyTableController" superclassName="PFQueryTableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MyTableController.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="PFQueryTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PFQueryTableViewController.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="9cU-TM-6M0"/>
         <segue reference="rJL-Fn-yZj"/>
     </inferredMetricsTieBreakers>
 </document>

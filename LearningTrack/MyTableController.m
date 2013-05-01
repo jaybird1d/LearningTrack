@@ -15,7 +15,7 @@
 
 
 @implementation MyTableController
-//@synthesize fieldName = _fieldName;
+@synthesize fieldName = _fieldName;
 @synthesize className = _className;
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object {
