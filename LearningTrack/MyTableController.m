@@ -17,6 +17,8 @@
 @implementation MyTableController
 @synthesize fieldName = _fieldName;
 @synthesize className = _className;
+@synthesize window = _window;
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object {
     static NSString *CellIdentifier = @"Cell";
@@ -25,6 +27,19 @@
     if (cell == nil) {
         cell = [[PFTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
+    
+    MyTableController *controller = [[MyTableController alloc] initWithClassName:@"MOOCs"];
+    [controller setTextKey:@"courseName"];
+//    [controller setPaginationEnabled:TRUE];
+//    [controller setPullToRefreshEnabled:TRUE];
+//    [controller setObjectsPerPage:2];
+    //[_controller objectsPerPage:2];
+    self.objectsPerPage = 10;
+    self.paginationEnabled = YES;
+    self.pullToRefreshEnabled = YES;
+
+    
+    self.window.rootViewController = controller;
     
     // Configure the cell
     cell.textLabel.text = [object objectForKey:@"courseName"];
@@ -59,10 +74,21 @@
     }
     return self;
 }*/
+-(NSString*)retrieveFromUserDefaults
+{
+    NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
+    NSString *val = nil;
+    
+    if (standardUserDefaults)
+        val = [standardUserDefaults objectForKey:@"fieldName"];
+    
+    return val;
+}
 
 - (PFQuery *)queryForTable {
     PFQuery *query = [PFQuery queryWithClassName:@"MOOCs"];
-    _fieldName = @"Science";
+    //_fieldName = @"Computer Science";
+    _fieldName = [self retrieveFromUserDefaults];
     
     // If Pull To Refresh is enabled, query against the network by default.
     if (self.pullToRefreshEnabled) {

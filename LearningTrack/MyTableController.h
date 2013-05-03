@@ -8,7 +8,11 @@
 
 #import <Parse/Parse.h>
 
-@interface MyTableController : PFQueryTableViewController
+@interface MyTableController : PFQueryTableViewController {
+    UIWindow *window;
+}
+@property (strong, nonatomic) UIWindow *window;
+
 @property NSString *fieldName;
 @property NSString *className;
 

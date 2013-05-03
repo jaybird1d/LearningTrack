@@ -11,7 +11,7 @@
 #import "MyTableController.h"
 
 @implementation AppDelegate
-@synthesize window = _window;
+//@synthesize window = _window;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -19,14 +19,14 @@
     [Parse setApplicationId:@"647b8OCtIH6CvMNNEkkepbG1nLAS3OKKauuiMqAl"
                   clientKey:@"OR8zJZ7TVv4ulQdA6WZTf5W04HUIBcrScQLXsOeC"];
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
-    MyTableController *controller = [[MyTableController alloc] initWithClassName:@"MOOCs"];
-    [controller setTextKey:@"courseName"];
-    [controller setPaginationEnabled:TRUE];
-    [controller setPullToRefreshEnabled:TRUE];
-    [controller setObjectsPerPage:10];
-
-    
-    self.window.rootViewController = controller;
+//    //MyTableController *controller = [[MyTableController alloc] initWithClassName:@"MOOCs"];
+//    [controller setTextKey:@"courseName"];
+//    [controller setPaginationEnabled:TRUE];
+//    [controller setPullToRefreshEnabled:TRUE];
+//    [controller setObjectsPerPage:10];
+//
+//    
+//    self.window.rootViewController = controller;
 
     return YES;
 }

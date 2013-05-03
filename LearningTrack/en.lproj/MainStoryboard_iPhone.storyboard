@@ -27,7 +27,8 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="JhZ-pn-tzb" kind="modal" identifier="loadCourseList" id="a7N-HO-nmg"/>
+                                    <action selector="businessButton:" destination="Oak-lD-gZm" eventType="touchUpInside" id="uEV-hD-u6u"/>
+                                    <segue destination="6PC-ZT-L0M" kind="modal" id="DrP-du-6ij"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sE7-12-nhI">
@@ -40,7 +41,8 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="2" kind="modal" id="sTw-99-Q5J"/>
+                                    <action selector="sciencebutton:" destination="Oak-lD-gZm" eventType="touchUpInside" id="h7P-v8-kkZ"/>
+                                    <segue destination="6PC-ZT-L0M" kind="modal" id="VCI-m5-zc1"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d8M-vj-dXf">
@@ -53,7 +55,8 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="JhZ-pn-tzb" kind="modal" identifier="loadCourseList" id="9cU-TM-6M0"/>
+                                    <action selector="compsciButton:" destination="Oak-lD-gZm" eventType="touchUpInside" id="Pr6-6b-inG"/>
+                                    <segue destination="6PC-ZT-L0M" kind="modal" id="Lzp-dl-Zjo"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uOK-iY-9Wr">
@@ -65,6 +68,10 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="healthmedicine:" destination="Oak-lD-gZm" eventType="touchUpInside" id="tcr-R9-JCA"/>
+                                    <segue destination="6PC-ZT-L0M" kind="modal" id="BAz-aV-l8m"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3xo-zs-HBu">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -75,6 +82,10 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="humanitiesbutton:" destination="Oak-lD-gZm" eventType="touchUpInside" id="R71-ge-zxd"/>
+                                    <segue destination="6PC-ZT-L0M" kind="modal" id="fAD-av-3JP"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rso-Yt-0bz">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -85,6 +96,10 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="mathscience:" destination="Oak-lD-gZm" eventType="touchUpInside" id="yU8-oQ-QnV"/>
+                                    <segue destination="6PC-ZT-L0M" kind="modal" id="mjl-kh-Lya"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rqz-FR-Cqi">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -129,7 +144,36 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="juZ-2J-R5X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-985" y="115"/>
+            <point key="canvasLocation" x="-832" y="123"/>
+        </scene>
+        <!--My Table Controller-->
+        <scene sceneID="LAI-cN-s2P">
+            <objects>
+                <tableViewController id="6PC-ZT-L0M" customClass="MyTableController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="pKc-Qa-k0L">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="courseName" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="W28-G1-0d2">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="6PC-ZT-L0M" id="cYW-gl-lHt"/>
+                            <outlet property="delegate" destination="6PC-ZT-L0M" id="3Tj-U9-srW"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Af7-be-t5u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-426" y="101"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="5">
@@ -218,38 +262,6 @@
             </objects>
             <point key="canvasLocation" x="-317" y="-550"/>
         </scene>
-        <!--My Table Controller-->
-        <scene sceneID="Qyg-sB-q3h">
-            <objects>
-                <tableViewController id="JhZ-pn-tzb" customClass="MyTableController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="113" sectionHeaderHeight="22" sectionFooterHeight="22" id="fKL-Py-l09">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="113" id="8iO-WE-2Bj">
-                                <rect key="frame" x="0.0" y="22" width="320" height="113"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="112"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </view>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="JhZ-pn-tzb" id="gbX-zc-eeq"/>
-                            <outlet property="delegate" destination="JhZ-pn-tzb" id="hS1-mx-O4Y"/>
-                        </connections>
-                    </tableView>
-                    <connections>
-                        <outlet property="courseNameTable" destination="fKL-Py-l09" id="FDz-H4-n0B"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eWh-om-Prg" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-286" y="237"/>
-        </scene>
     </scenes>
     <classes>
         <class className="MyTableController" superclassName="PFQueryTableViewController">
@@ -263,6 +275,14 @@
         </class>
         <class className="ViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="businessButton:"/>
+                <relationship kind="action" name="compsciButton:"/>
+                <relationship kind="action" name="healthmedicine:"/>
+                <relationship kind="action" name="humanitiesbutton:"/>
+                <relationship kind="action" name="mathscience:"/>
+                <relationship kind="action" name="sciencebutton:"/>
+            </relationships>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -271,7 +291,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="9cU-TM-6M0"/>
         <segue reference="rJL-Fn-yZj"/>
+        <segue reference="mjl-kh-Lya"/>
     </inferredMetricsTieBreakers>
 </document>

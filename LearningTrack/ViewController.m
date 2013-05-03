@@ -26,6 +26,63 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+-(void)saveToUserDefaults:(NSString*)myString
+{
+    NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
+    
+    if (standardUserDefaults) {
+        [standardUserDefaults setObject:myString forKey:@"fieldName"];
+        [standardUserDefaults synchronize];
+    }
+}
+
+- (IBAction)businessButton:(id)sender {
+    _fieldName = [sender currentTitle];
+    NSLog(@"%@", _fieldName);
+    [self saveToUserDefaults:_fieldName];
+}
+- (IBAction)compsciButton:(id)sender {
+    _fieldName = [sender currentTitle];
+//    NSString *happy;
+//    happy = [sender currentTitle];
+//    NSLog(@"%@", happy);
+    NSLog(@"%@", _fieldName);
+    [self saveToUserDefaults:_fieldName];
+
+
+}
+- (IBAction)healthmedicine:(id)sender {
+    _fieldName = [sender currentTitle];
+    NSLog(@"%@", _fieldName);
+    [self saveToUserDefaults:_fieldName];
+
+
+}
+- (IBAction)humanitiesbutton:(id)sender {
+    _fieldName = [sender currentTitle];
+    NSLog(@"%@", _fieldName);
+    [self saveToUserDefaults:_fieldName];
+
+
+}
+
+- (IBAction)mathscience:(id)sender {
+    _fieldName = [sender currentTitle];
+    NSLog(@"%@", _fieldName);
+    [self saveToUserDefaults:_fieldName];
+
+
+
+}
+- (IBAction)sciencebutton:(id)sender {
+    _fieldName = [sender currentTitle];
+    NSLog(@"%@", _fieldName);
+    [self saveToUserDefaults:_fieldName];
+
+
+}
+
+
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if([[segue identifier] isEqualToString:@"loadCourseList"])
