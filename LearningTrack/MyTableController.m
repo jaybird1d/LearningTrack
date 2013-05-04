@@ -18,6 +18,16 @@
 @synthesize fieldName = _fieldName;
 @synthesize className = _className;
 @synthesize window = _window;
+NSString *checkobject;
+
+-(void) checkingobject {
+    NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
+    
+    if (checkobject != @"hi")
+        checkobject = [standardUserDefaults objectForKey:@"updatedList"];
+    
+}
+
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object {
@@ -121,6 +131,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    checkobject = @"fore";
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -279,7 +290,41 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [super tableView:tableView didSelectRowAtIndexPath:indexPath];
+    NSLog(@"%@", indexPath);
+    NSString *indexfinal;
+    indexfinal = [NSString stringWithFormat:@"%d-woohoo",indexPath.row];
+    [self checkingobject];
+    
+    if (checkobject == @"fore") {
+    
+    NSMutableArray *mutableArray = [[NSMutableArray alloc] init];
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    [prefs setObject:mutableArray forKey:@"theArray"];
+    NSMutableArray *mutableArrayCopy = [[prefs objectForKey:@"theArray"] mutableCopy];
+    [mutableArrayCopy addObject:indexfinal];
+    [prefs setObject:mutableArrayCopy forKey:@"theArray"];
+        NSLog(@"hi bobfred");
+        checkobject = @"hi";
 }
+    else
+    {
+        NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+        NSMutableArray *mutableArrayCopy = [[prefs objectForKey:@"theArray"] mutableCopy];
+        [mutableArrayCopy addObject:indexfinal];
+        [prefs setObject:mutableArrayCopy forKey:@"theArray"];
+            NSLog(@"hi jason dunnnnnnn");}
+    
+    
+}
+
+//-(void)saveToUserDefaults:(NSArray*)myString
+//{
+//        
+//    if (standardUserDefaults) {
+//        [standardUserDefaults setObject:mutableArrayCopy forKey:@"theArray"];
+//        [standardUserDefaults synchronize];
+//    }
+//}
 
 
 @end

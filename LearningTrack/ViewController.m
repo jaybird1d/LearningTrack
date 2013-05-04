@@ -14,6 +14,7 @@
 
 @implementation ViewController
 @synthesize fieldName = _fieldName;
+NSString *hello;
 
 - (void)viewDidLoad
 {
@@ -26,6 +27,15 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+-(void) check
+{
+    NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
+    NSString *checkvalue = [standardUserDefaults objectForKey:@"checker"];
+    if (checkvalue == @"pleaseclearcourses") {
+        hello = nil;
+    NSLog(hello);
+    }}
 -(void)saveToUserDefaults:(NSString*)myString
 {
     NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
@@ -36,10 +46,34 @@
     }
 }
 
+-(void)saveToUserDefaults2:(NSString*)myString
+{
+    NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
+    if (standardUserDefaults) {
+        [standardUserDefaults setObject:myString forKey:@"updatedList"];
+        [standardUserDefaults synchronize];
+    }
+}
+-(void) switch
+{
+    [self check];
+    if (hello == nil)
+    {[self saveToUserDefaults2:@"fore"];
+    hello = @"hello";
+    NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
+    [standardUserDefaults setObject:@"jason" forKey:@"checker"];
+    }
+        else
+        {[self saveToUserDefaults2:@"hello"];
+            NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
+            [standardUserDefaults setObject:@"quit" forKey:@"checker"];}
+}
+
 - (IBAction)businessButton:(id)sender {
     _fieldName = [sender currentTitle];
     NSLog(@"%@", _fieldName);
     [self saveToUserDefaults:_fieldName];
+    [self switch];
 }
 - (IBAction)compsciButton:(id)sender {
     _fieldName = [sender currentTitle];
@@ -48,6 +82,8 @@
 //    NSLog(@"%@", happy);
     NSLog(@"%@", _fieldName);
     [self saveToUserDefaults:_fieldName];
+    [self switch];
+
 
 
 }
@@ -55,6 +91,7 @@
     _fieldName = [sender currentTitle];
     NSLog(@"%@", _fieldName);
     [self saveToUserDefaults:_fieldName];
+    [self switch];
 
 
 }
@@ -62,6 +99,7 @@
     _fieldName = [sender currentTitle];
     NSLog(@"%@", _fieldName);
     [self saveToUserDefaults:_fieldName];
+    [self switch];
 
 
 }
@@ -71,6 +109,7 @@
     NSLog(@"%@", _fieldName);
     [self saveToUserDefaults:_fieldName];
 
+    [self switch];
 
 
 }
@@ -79,6 +118,7 @@
     NSLog(@"%@", _fieldName);
     [self saveToUserDefaults:_fieldName];
 
+    [self switch];
 
 }
 

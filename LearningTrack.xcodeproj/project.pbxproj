@@ -19,6 +19,7 @@
 		5A2E91D81730519400D8F810 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A2E91D71730519400D8F810 /* SystemConfiguration.framework */; };
 		5A2E91DA173052CA00D8F810 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A2E91D9173052CA00D8F810 /* Parse.framework */; };
 		5A2E91DD173058F300D8F810 /* MyTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2E91DC173058F300D8F810 /* MyTableController.m */; };
+		5A2E91E31734413500D8F810 /* MyCourses.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2E91E21734413500D8F810 /* MyCourses.m */; };
 		5AE662E4171F2D610001E5A8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AE662E3171F2D610001E5A8 /* UIKit.framework */; };
 		5AE662E6171F2D610001E5A8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AE662E5171F2D610001E5A8 /* Foundation.framework */; };
 		5AE662E8171F2D610001E5A8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AE662E7171F2D610001E5A8 /* CoreGraphics.framework */; };
@@ -63,6 +64,8 @@
 		5A2E91D9173052CA00D8F810 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		5A2E91DB173058F300D8F810 /* MyTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableController.h; sourceTree = "<group>"; };
 		5A2E91DC173058F300D8F810 /* MyTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableController.m; sourceTree = "<group>"; };
+		5A2E91E11734413500D8F810 /* MyCourses.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCourses.h; sourceTree = "<group>"; };
+		5A2E91E21734413500D8F810 /* MyCourses.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCourses.m; sourceTree = "<group>"; };
 		5AE662E0171F2D610001E5A8 /* LearningTrack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearningTrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AE662E3171F2D610001E5A8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5AE662E5171F2D610001E5A8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -168,6 +171,8 @@
 				5AE662F2171F2D610001E5A8 /* AppDelegate.h */,
 				5AE662F3171F2D610001E5A8 /* AppDelegate.m */,
 				5AE662FB171F2D610001E5A8 /* MainStoryboard_iPhone.storyboard */,
+				5A2E91E11734413500D8F810 /* MyCourses.h */,
+				5A2E91E21734413500D8F810 /* MyCourses.m */,
 				5A2E91DB173058F300D8F810 /* MyTableController.h */,
 				5A2E91DC173058F300D8F810 /* MyTableController.m */,
 				5A2E91C21730474300D8F810 /* FieldViewController.h */,
@@ -329,6 +334,7 @@
 				5AE66303171F2D610001E5A8 /* ViewController.m in Sources */,
 				5A2E91C41730474300D8F810 /* FieldViewController.m in Sources */,
 				5A2E91DD173058F300D8F810 /* MyTableController.m in Sources */,
+				5A2E91E31734413500D8F810 /* MyCourses.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

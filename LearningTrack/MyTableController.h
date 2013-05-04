@@ -12,7 +12,9 @@
     UIWindow *window;
 }
 @property (strong, nonatomic) UIWindow *window;
+//@property (retain, nonatomic) IBOutlet UIButton *tableHeaderView;
 
+//@property(nonatomic, retain) UIView *tableHeaderView
 @property NSString *fieldName;
 @property NSString *className;
 
